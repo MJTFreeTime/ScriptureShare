@@ -71,7 +71,7 @@ app.get('/gallery/sendStr', function(req, res) {
     sendImages(res)
 });
 
-app.post('/upload', upload.array('image'), (req, res) => {
+app.post('/upload/status', upload.array('image'), (req, res) => {
     return res.json({ status: 'OK', uploaded: req.files.length });
 });
 
