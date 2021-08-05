@@ -3,7 +3,7 @@ function addImage(src, toName) {
     img.src = src;
     img.alt = toName;
     document.getElementById("images").insertAdjacentHTML("afterbegin", 
-    '<div class="img_box"> \
+    '<div class="img_box" id="g_photo"> \
     <img src="' + src + 
     '"/> \
     </div>'
