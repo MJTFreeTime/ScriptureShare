@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
 \This file is for gallery/
+/*
+* {
+    box-sizing: border-box;
+  }
+
 
 body {
     background-color: lightgrey;
@@ -45,22 +50,76 @@ li a:hover {
     font-weight: bold;
     text-align: center;
 }
+*/
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
 
+body {
+	color: #345645;
+	background: #e3e3e3;
+}
 
+/* Gallery Flex */
 .Gallery {
-    flex-wrap: wrap;
-    display: flex;    
-    justify-content: center;
-    align-content: space-between;
-    flex-direction: row;
+	display: flex;
+	flex-wrap: wrap;
+	padding: 20px 20px 0 20px;
+	max-width: 499px;
 }
 
-img {
-    max-height:500px;
-    max-width:500px;
-    border-radius: 20px;
-}
-
+/* Gallery Items */
 .img_box {
-    padding: 20;
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.img_box > img {
+	display: block;
+	margin: 0 auto;
+	width: 100%;
+	border-radius: .25px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, .75);
+}
+
+.img_box > img:hover {
+	cursor: pointer;
+}
+
+/* Responsive */
+@media only screen and (min-width: 500px) {
+	.Gallery {
+		max-width: 719px;
+	}
+	
+	.img_box {
+		width: calc((100% / 2) - 10px);
+        height: calc((100% /2) - 10px);
+	}
+	
+	.img_box:nth-child(even) {
+		margin-left: 20px;
+	
+	}
+}
+
+@media only screen and (min-width: 720px) {
+	.Gallery {
+		max-width: 100%;
+		padding: 20px 20px 0 0;
+	}
+	
+	.img_box{
+		width: calc((100% / 3) - 20px);
+       
+	}
+	
+	.img_box:nth-child(odd) {
+		margin-left: 20px;
+
+	}
 }
