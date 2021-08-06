@@ -1,14 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
 \This file is for gallery/
-/*
 * {
-    box-sizing: border-box;
-  }
 
+	box-sizing: border-box;
+}
 
 body {
-    background-color: lightgrey;
+    background-color: lightslategray;
     padding: 10px;
 }
 
@@ -26,7 +25,7 @@ li {
 
 li a {
     display: block;
-    color: white;
+    color: whitesmoke;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -37,27 +36,21 @@ li a:hover {
 }
 
 .header {
-  background-color: white;
+  background-color: whitesmoke;
   text-align: center;
   padding: 20px;
   font-family: 'Montserrat', sans-serif;
 }
 
 .descA, p.thick{
-    background-color: white;
+    background-color: whitesmoke;
     padding: 50px;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     text-align: center;
 }
-*/
-*,
-*::before,
-*::after {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
+
+
 
 body {
 	color: #345645;
@@ -70,36 +63,68 @@ body {
 	flex-wrap: wrap;
 	padding: 20px 20px 0 20px;
 	max-width: 499px;
+    position: relative;
+
+    
 }
+
+.img_box img{
+    height: 700px;
+    width: 350px;
+    object-fit: contain;
+    background-color: whitesmoke;
+}
+
 
 /* Gallery Items */
 .img_box {
 	width: 100%;
 	margin-bottom: 20px;
+
 }
 
 .img_box > img {
 	display: block;
 	margin: 0 auto;
-	width: 100%;
-	border-radius: .25px;
+    width: 100%;
+   	border-radius: .25px;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, .75);
+    resize: both;
+    overflow: auto;
+    
+    
+  
 }
 
 .img_box > img:hover {
 	cursor: pointer;
+    
 }
+
+
 
 /* Responsive */
 @media only screen and (min-width: 500px) {
 	.Gallery {
-		max-width: 719px;
+        position: relative;
+        height: 499px;
+        display: flex;
+       
 	}
-	
-	.img_box {
+  
+    .img_box {
 		width: calc((100% / 2) - 10px);
-        height: calc((100% /2) - 10px);
+       
 	}
+
+
+    .img_box img {
+        max-width: 100%;
+        height: 499px;
+        object-fit:contain;
+        overflow: hidden;
+
+    }
 	
 	.img_box:nth-child(even) {
 		margin-left: 20px;
@@ -109,17 +134,33 @@ body {
 
 @media only screen and (min-width: 720px) {
 	.Gallery {
+        position: relative;
 		max-width: 100%;
+        max-height: 100%;
 		padding: 20px 20px 0 0;
+        
+        
 	}
 	
 	.img_box{
 		width: calc((100% / 3) - 20px);
-       
-	}
+        
+    }
+
+    .img_box img{
+        object-fit: contain;
+        overflow:auto;
+        height: 800px;
+        flex-grow:1;
+        margin: .2rem;
+    }
 	
+    
+
 	.img_box:nth-child(odd) {
 		margin-left: 20px;
+        position: relative;
+
 
 	}
 }
