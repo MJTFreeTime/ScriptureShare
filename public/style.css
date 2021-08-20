@@ -79,8 +79,7 @@ body {
 /* Gallery Items */
 .img_box {
 	width: 100%;
-	margin-bottom: 20px;
-    
+	padding-bottom: 20px;
 }
 
 .img_box > img {
