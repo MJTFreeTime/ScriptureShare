@@ -1,9 +1,26 @@
+/*Standardized*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  
+}
+
 body, html {
-  height: 100%;
+  max-height:max-content;
+  height: 100vh;
   margin: 0;
   font: 400 15px/1.8 "Lato", sans-serif;
-  color: #777;
+  color: rgb(0, 0, 0);
+
+  font-weight: 600;
+  font-size: 16px;
 }
+
+
+
+/*Top part of page*/
 
 .bg {
   /* The image used */
@@ -17,13 +34,13 @@ body, html {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-    opacity: 0.75;
+    opacity: 0. 55;
 }
 
 .content {
 
     position: relative;
-    opacity: .9;
+    opacity: .8;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -47,36 +64,77 @@ body, html {
   font-size: 50px;
   font-weight: semi-bold;
   letter-spacing: 10px;
+  background-color: #333;
+  
 
 }
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
+/*Navigation*/
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  
+  padding: 30px 70px;
 }
 
-li {
-    float: left;
+a{
+  text-decoration: none;
+ 
 }
 
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+
+
+.nav-area {
+  list-style: none;
+  
 }
 
-li a:hover {
-    background-color: #111;
+.nav-area li{
+  display: inline-block;
+  padding: 0 15px;
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: bolder;
+  color: rgb(255, 255, 255);
+  
 }
 
-.header {
-  background-color: white;
+.nav-area li a{
+  transition: .3;
+  color: rgb(255, 255, 255);
+  
+}
+
+.btn-area{
+  color: rgb(255, 255, 255);
+  margin-right: 10px;
+  font-size: 24px;
+}
+
+
+/* Bottom section of page*/
+
+.fb {
+  padding-top: 6in;
   text-align: center;
-  padding: 20px;
-  font-family: 'Montserrat', sans-serif;
+  line-height: 95px;
+  padding-bottom:6.5in;
+  
+}
+
+.fb span.TitleA{
+  padding-top: 1in;
+  font-size: 90px;
+  font-family: 'Poppins',Helvetica,Arial,Lucida,sans-serif;
+  font-weight: bold;
+  letter-spacing: 4px;
+}
+
+.fb span.TitleB{
+  padding-top: 1in;
+  font-size: 50px;
+  font-family: 'Poppins',Helvetica,Arial,Lucida,sans-serif;
+  font-weight: bold;
+  letter-spacing: 4px;
 }
