@@ -5,7 +5,7 @@
 
 .top_nav ul {
     z-index: 100; /* Ensures nav is overlayed on all elements */
-    position: fixed;
+    position: absolute;
     top: 25px; left: 0; right: 0;
     margin: 0;
     float: left;
