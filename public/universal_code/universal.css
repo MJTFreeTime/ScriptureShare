@@ -1,0 +1,34 @@
+@font-face {
+    font-family: Couture, sans-serif;
+    src: url("../fonts/Couture/couture-bld.otf");
+}
+
+.top_nav ul {
+    z-index: 100; /* Ensures nav is overlayed on all elements */
+    position: fixed;
+    top: 25px; left: 0; right: 0;
+    margin: 0;
+    float: left;
+    background-color: #2E2E2E;
+    width: 90%; height: 50px;
+    margin-left: auto; margin-right: auto;
+    border-radius: 25px;
+    list-style-type: none;
+}
+
+.top_nav ul li a {
+    display: block;
+    color: white;
+    float:left;
+    text-decoration: none;
+    text-align: center;
+    font-family: Couture;
+    padding-top: 15px;
+    font-size: 16px;
+    margin-right: 40px;
+    padding-right: 2vw; padding-left: 2vw; padding-bottom: 16px;
+}
+
+.top_nav ul li a:hover {
+    opacity: 50%;
+}

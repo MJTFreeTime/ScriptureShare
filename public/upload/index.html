@@ -1,16 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>File Upload Test</h1>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../universal_code/universal.css" rel="stylesheet" type="text/css"/>
+        <link href="style.css" rel="stylesheet" type="text/css"/>
+        <title>Upload</title>
+    </head>
 
-    <form action="./status" method="post" enctype="multipart/form-data">
-        <input type="file" name="image" multiple/>
-        <button>Submit</button>
-      </form>
-</body>
+    <body>
+        <div class="top_nav">
+            <ul>
+                <li><a href="../">Home</a></li>
+                <li><a href="../Gallery">Gallery</a></li>
+                <li><a href="./">Upload</a></li>
+                <li><a href="#">About Us</a></li>
+                <li style="float:right"><a class ="cta" href="#">Login</a></li>
+            </ul>
+        </div>
+
+        <div class="upload_box">
+            <h1>Post Your Photo!</h1>
+
+            <form action="./status" method="post" enctype="multipart/form-data">
+                <input type="file" name="image" multiple/>
+                <button>Upload!</button>
+            </form>
+        </div>
+    </body>
 </html>

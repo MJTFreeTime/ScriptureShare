@@ -1,0 +1,80 @@
+@font-face {
+    font-family: Couture, sans-serif;
+    src: url("fonts/Couture/couture-bld.otf");
+}
+
+body {
+    margin:0px;
+    height:100%;
+}
+
+/************  BACKGROUND IMAGE ************/
+
+.bg_image {
+    z-index: 0;
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: url("site_images/backgroundA.png");
+    background-size: cover;
+}
+
+/************  MAIN TEXT ************/
+
+/* A Background div To Contain The Main Text */
+.main_text {
+    z-index: 1;
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    width: 900px; height: 300px;
+    background-color: #2e2e2eb3;
+    border-radius: 35px;
+    text-align: center;
+}
+
+.main_text h1 {
+    color: white;
+    font-family: Couture;
+    font-size: 55px;
+    margin-top: 60px;
+    margin-bottom: 0px;
+    letter-spacing: 10px;
+}
+
+.main_text p {
+    color: white;
+    font-family: Corbel;
+    font-size: 30px;
+}
+
+/* Media Queries For Main Text */
+
+@media screen and (max-width: 900px) {
+    .main_text {
+        width: 600px; height: 250px;
+    }
+
+    .main_text h1 {
+        font-size: 40px;
+        letter-spacing: 6px;
+    }
+
+    .main_text p {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .main_text {
+        width: 400px; height: 200px;
+    }
+
+    .main_text h1 {
+        font-size: 30px;
+        letter-spacing: 4px;
+    }
+
+    .main_text p {
+        font-size: 16px;
+    }
+}

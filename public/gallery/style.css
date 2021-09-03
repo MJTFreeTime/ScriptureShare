@@ -10,34 +10,11 @@ body {
     padding: 10px;
 }
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-}
-
-li {
-    float: left;
-}
-
-li a {
-    display: block;
-    color: whitesmoke;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-li a:hover {
-    background-color: #111;
-}
-
 .header {
   background-color: whitesmoke;
   text-align: center;
   padding: 20px;
+  margin-top: 80px;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -48,8 +25,6 @@ li a:hover {
     font-weight: bold;
     text-align: center;
 }
-
-
 
 body {
 	color: #345645;
@@ -64,8 +39,6 @@ body {
 	max-width: 499px;
     max-height:  800px;
     position: relative;
-    
-    
 }
 
 .img_box img{
