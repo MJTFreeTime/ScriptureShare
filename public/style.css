@@ -34,7 +34,7 @@ body {
 
 .main_text h1 {
     color: white;
-    font-family: Couture;
+    font-family: 'Couture', sans-serif;
     font-size: 55px;
     margin-top: 60px;
     margin-bottom: 0px;
@@ -43,7 +43,7 @@ body {
 
 .main_text p {
     color: white;
-    font-family: Corbel;
+    font-family: 'Couture', sans-serif;
     font-size: 30px;
 }
 

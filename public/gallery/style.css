@@ -1,4 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@font-face {
+    font-family: 'Couture', sans-serif;
+    src: url("fonts/Couture/couture-bld.otf");
+}
+
 
 \This file is for gallery/
 * {
@@ -15,13 +19,14 @@ body {
   text-align: center;
   padding: 20px;
   margin-top: 80px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Couture', sans-serif;
+
 }
 
 .descA, p.thick{
     background-color: whitesmoke;
     padding: 50px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Couture', sans-serif;
     font-weight: bold;
     text-align: center;
 }
