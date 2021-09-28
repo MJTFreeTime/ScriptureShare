@@ -62,7 +62,7 @@ function sendImages(res) {
     res.write("data: " + arr + "\n\n");
 }
 
-app.get('/gallery/sendStr', function(req, res) {
+app.get('public/gallery/sendStr', function(req, res) {
     res.writeHead(200, {
         'Content-Type': 'text/event-stream',
         'Cache-Control': 'no-cache',
