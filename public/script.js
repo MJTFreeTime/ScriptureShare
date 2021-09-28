@@ -13,7 +13,7 @@ function addImage(src, toName) {
 var imageNames;
 
 if (!!window.EventSource) {
-    var source = new EventSource('../sendStr/')
+    var source = new EventSource('/gallery/sendStr')
 
     source.addEventListener('message', function(e) {
         imageNames = e.data.split(',');
