@@ -20,7 +20,7 @@ if (!!window.EventSource) {
         console.log(imageNames)
 
         for (let i = 0; i < imageNames.length; i++) {
-            addImage("../pictures/" + imageNames[i], "item" + imageNames[i].substr(5, imageNames[i].length - 10))
+            addImage("/pictures/" + imageNames[i], "item" + imageNames[i].substr(5, imageNames[i].length - 10))
         }
     }, false)
 
