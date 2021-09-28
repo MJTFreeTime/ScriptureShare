@@ -13,14 +13,14 @@ function addImage(src, toName) {
 var imageNames;
 
 if (!!window.EventSource) {
-    var source = new EventSource('/gallery/sendStr')
+    var source = new EventSource('./gallery/sendStr')
 
     source.addEventListener('message', function(e) {
         imageNames = e.data.split(',');
         console.log(imageNames)
 
         for (let i = 0; i < imageNames.length; i++) {
-            addImage("/pictures/" + imageNames[i], "item" + imageNames[i].substr(5, imageNames[i].length - 10))
+            addImage("./pictures/" + imageNames[i], "item" + imageNames[i].substr(5, imageNames[i].length - 10))
         }
     }, false)
 
