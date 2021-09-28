@@ -1,6 +1,11 @@
 @font-face {
-    font-family: Couture, sans-serif;
-    src: url("fonts/Couture/couture-bld.otf");
+    font-family: 'Couture';
+    src: url("fonts/Couture/couture-bld.otf") format('opentype');
+}
+
+@font-face {
+    font-family: 'Corbel';
+    src: url("fonts/Corbel/Corbel.ttf") format('truetype');
 }
 
 body {
@@ -43,7 +48,7 @@ body {
 
 .main_text p {
     color: white;
-    font-family: 'Couture', sans-serif;
+    font-family: 'Corbel', sans-serif;
     font-size: 30px;
 }
 
