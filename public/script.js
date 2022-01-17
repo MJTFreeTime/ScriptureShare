@@ -32,15 +32,6 @@ function addImage(src, toName) {
 	tempFrag.appendChild(img_container);
 	
 	document.querySelector(".img_gallery").appendChild(tempFrag);
-	
-	async function readFromClipboard() {
-	  try {
-		const text = await navigator.clipboard.readText();
-		console.log(text);
-	  } catch (error) {
-		console.error(error);
-	  }
-	}
 }
 
 var imageNames;
