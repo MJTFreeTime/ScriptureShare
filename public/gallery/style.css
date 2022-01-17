@@ -1,8 +1,3 @@
-@font-face {
-    font-family: 'Couture', sans-serif;
-    src: url("fonts/Couture/couture-bld.otf");
-}
-
 /****** GALLERY HEADER AND TEXT BOX *****/
 
 body {
@@ -16,13 +11,13 @@ body {
 	text-align: center;
 	padding: 20px;
 	margin-top: 80px;
-	font-family: 'Couture', sans-serif;
+	font-family: 'sans-serif', sans-serif;
 }
   
 .descA, p.thick{
 	background-color: whitesmoke;
 	padding: 50px;
-	font-family: 'Couture', sans-serif;
+	font-family: 'sans-serif', sans-serif;
 	font-weight: bold;
 	text-align: center;
 }

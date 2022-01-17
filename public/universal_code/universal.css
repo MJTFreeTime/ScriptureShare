@@ -1,6 +1,6 @@
 @font-face {
-    font-family: Couture, sans-serif;
-    src: url("../fonts/Couture/couture-bld.otf");
+    font-family: 'Couture';
+    src: url("../fonts/Couture/couture-bld.otf") format('opentype');
 }
 
 .top_nav ul {
