@@ -4,7 +4,7 @@ const app = express();
 
 app.use(express.static('public'))
 
-images.loadImages(app)
+images.setupImages(app)
 
 app.listen(3000, function () {
     console.log("Express server listening on port 3000");

@@ -56,7 +56,7 @@ function sendImages(res) {
     res.write("data: " + arr + "\n\n");
 }
 
-function loadImages(app) {
+function setupImages(app) {
 	app.get('/gallery/sendStr/', function(req, res) {
 		res.writeHead(200, {
 			'Content-Type': 'text/event-stream',
@@ -72,5 +72,5 @@ function loadImages(app) {
 }
 
 module.exports = {
-	loadImages
+	setupImages
 };
