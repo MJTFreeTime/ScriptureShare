@@ -1,4 +1,4 @@
-function addImage(src, toName) {
+function addImage(src) {
 	// Create document fragment to temporarily hold a virtual "fragment" of DOM manipulation
 	let tempFrag = document.createDocumentFragment();
 	
@@ -34,37 +34,16 @@ function addImage(src, toName) {
 	document.querySelector(".img_gallery").appendChild(tempFrag);
 }
 
-function loadImages() {
-	var imageNames;
-
-	if (!!window.EventSource) {
-		var source = new EventSource('/gallery/sendStr/')
-
-		source.addEventListener('message', function(e) {
-			imageNames = e.data.split(',');
-
-			for (let i = 0; i < imageNames.length; i++) {
-				addImage("/pictures/" + imageNames[i], "item" + imageNames[i].substr(5, imageNames[i].length - 10))
-			}
-		}, false)
-
-		source.addEventListener('open', function(e) {
-			console.log("Connected")
-		}, false)
-
-		source.addEventListener('error', function(e) {
-			if (e.eventPhase == EventSource.CLOSED)
-				source.close()
-			if (e.target.readyState == EventSource.CLOSED) {
-				console.log("Disconnected")
-			}
-			else if (e.target.readyState == EventSource.CONNECTING) {
-				console.log("Connecting...")
-			}
-		}, false)
-		} else {
-			console.log("Your browser doesn't support SSE")
-	}
+async function imageNames() {
+	let img_names = await fetch('/api/gallery/image_names')
+		.then (data => data.json())
+	return img_names;
 }
 
-loadImages();
+imageNames()
+	.then(data => {
+		for (let i = 0; i < data.length; ++i) {
+			console.log(data[i]);
+			addImage('/pictures/' + data[i]);
+		}
+	});

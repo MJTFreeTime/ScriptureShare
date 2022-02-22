@@ -1,11 +1,23 @@
+// Outside Modules
 const express = require('express');
-const images = require('./js/images')
+
+// Express app initialization
 const app = express();
 
-app.use(express.static('public'))
+// App variables (e.g. port)
+const port = 3000;
 
-images.setupImages(app)
+// JS Files
+const galleryDisplayJS = require('./js/gallery_display.js');
+const galleryUploadJS = require('./js/gallery_upload.js');
 
-app.listen(3000, function () {
+// Static paths definitions
+app.use(express.static('public'));
+
+// Routing setup
+galleryDisplayJS.image_names(app);
+galleryUploadJS.image_upload(app);
+
+app.listen(port, () => {
     console.log("Express server listening on port 3000");
 });

@@ -21,9 +21,9 @@
         <div class="upload_box">
             <h1>Post Your Photo!</h1>
 
-            <form action="./status" method="post" enctype="multipart/form-data">
-                <input type="file" name="image" multiple/>
-                <button>Upload!</button>
+            <form action="/api/gallery/upload_image" method="post" enctype="multipart/form-data" class="upload_form">
+                <input type="file" name="file_input" class="file_input">
+                <input type="submit" value="Submit" class="submit_input">
             </form>
         </div>
     </body>
