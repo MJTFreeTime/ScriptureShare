@@ -3,14 +3,13 @@
 body {
 	color: #345645;
 	background: #e3e3e3;
-	padding: 10px;
 }
 
 .header {
 	background-color: whitesmoke;
 	text-align: center;
 	padding: 20px;
-	margin-top: 80px;
+	padding-top: 100px;
 	font-family: 'sans-serif', sans-serif;
 }
   

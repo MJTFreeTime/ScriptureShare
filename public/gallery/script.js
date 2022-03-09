@@ -43,7 +43,6 @@ async function imageNames() {
 imageNames()
 	.then(data => {
 		for (let i = 0; i < data.length; ++i) {
-			console.log(data[i]);
 			addImage('/pictures/' + data[i]);
 		}
 	});
